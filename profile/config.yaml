@@ -1,0 +1,34 @@
+
+
+########################################
+## Snakemake Parameters
+########################################
+
+
+##########
+## General Parameters
+##########
+
+jobs: 100
+local-cores: 1
+keep-going: True
+rerun-incomplete: True
+printshellcmds: True
+#quiet: True
+
+##########
+## Environment Parameters
+##########
+
+use-conda: True
+conda-frontend: 'mamba'
+conda-prefix: 'installed_envs/conda'
+
+use-singularity: True
+singularity-prefix: 'installed_envs/singularity'
+
+##########
+## Config File Parameters
+##########
+
+configfile: 'config.yaml' # standard config file 

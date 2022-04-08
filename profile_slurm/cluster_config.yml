@@ -1,0 +1,21 @@
+
+
+__default__:
+  account: hoang31 # your hpc account
+  mail-user: your.adresse@email.com # your email (optional!)
+  job-name: "smk_{rule}_{wildcards}"
+  output: "slurm_logs/{rule}/slurm_%j_%x.out"
+  time: 60 # default time (minutes)
+  ntasks: 1
+  cpus-per-task: 1
+
+
+#####
+## Rules
+#####
+
+
+Rule1:
+  time: 1:00:00
+  ntasks: 1
+  cpus-per-task: 4

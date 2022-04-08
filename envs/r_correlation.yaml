@@ -1,0 +1,12 @@
+channels :
+  - defaults
+  - conda-forge
+  - r
+  - bioconda
+
+dependencies :
+  - r-base
+  - r-data.table
+  - r-tidyverse
+  - r-svglite
+  - r-corrplot 

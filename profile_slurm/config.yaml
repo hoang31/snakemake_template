@@ -1,0 +1,41 @@
+
+
+########################################
+## Snakemake Parameters
+########################################
+
+
+##########
+## General Parameters
+##########
+
+jobs: 200
+restart-times: 3
+max-jobs-per-second: 1
+max-status-checks-per-second: 1
+local-cores: 1
+latency-wait: 60
+keep-going: True
+rerun-incomplete: True
+nolock: True
+printshellcmds: True
+#quiet: True
+
+##########
+## Environment Parameters
+##########
+
+use-conda: True
+conda-frontend: 'mamba'
+conda-prefix: 'installed_envs/conda'
+
+use-singularity: True
+singularity-prefix: 'installed_envs/singularity'
+
+##########
+## Config File Parameters
+##########
+
+configfile: 'config.yaml' # standard config file that will be used for the pipeline
+cluster: 'mkdir -p slurm_logs/{rule} && python3 cluster_profile/slurmSubmit.py {dependencies}' # script for sbatch jobs
+cluster-config: 'cluster_profile/cluster_config.yml' # config parameters for each rule
